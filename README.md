@@ -41,29 +41,24 @@ More information is available under the section titled "Manual Installation" on 
 #include <SPI.h>
 #include <mcp4xxx.h>
 
-MCP4XXX* pot;
-
-void setup()
-{
-    // Construct an instance of the MCP4XXX to manage the digipot.
-    // The first parameter is the pin number to use for 'chip select' (CS), if you are
-    // using the default SPI CS pin for your Arduino you can simply omit this parameter.
-    pot = new MCP4XXX(49);
-}
+// Construct an instance of the MCP4XXX to manage the digipot.
+// The first parameter is the pin number to use for 'chip select' (CS), if you are
+// using the default SPI CS pin for your Arduino you can simply omit this parameter.
+MCP4XXX pot(49);
 
 void loop()
 {
     // Move the wiper to the lowest value
-    pot->set(0);
+    pot.set(0);
 
     // Move the wiper to the highest value
-    pot->set(pot->max_value());
+    pot.set(pot.max_value());
 
     // Increment the wiper position by one
-    pot->increment();
+    pot.increment();
 
     // Decrement the wiper position by one
-    pot->decrement();
+    pot.decrement();
 }
 ```
 
