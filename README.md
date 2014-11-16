@@ -41,8 +41,6 @@ More information is available under the section titled "Manual Installation" on 
 #include <SPI.h>
 #include <mcp4xxx.h>
 
-use namespace icecave::arduino;
-
 MCP4XXX* pot;
 
 void setup()

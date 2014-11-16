@@ -1,8 +1,5 @@
 #include "mcp4xxx.h"
 
-namespace icecave {
-namespace arduino {
-
 MCP4XXX::MCP4XXX(byte select_pin, Pot pot, Resolution resolution, WiperConfiguration config)
   : m_select_pin(select_pin)
   , m_pot(pot)
@@ -272,5 +269,3 @@ bool MCP4XXX::get_tcon(byte mask, bool& value) const
   return false;
 }
 
-} // end namespace arduino
-} // end namespace icecave

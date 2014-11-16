@@ -1,11 +1,8 @@
-#ifndef __ICECAVE_ARDUINO_MCP4XXX
-#define __ICECAVE_ARDUINO_MCP4XXX
+#ifndef __ARDUINO_MCP4XXX
+#define __ARDUINO_MCP4XXX
 
 #include <Arduino.h>
 #include <SPI.h>
-
-namespace icecave {
-namespace arduino {
 
 /**
  * Controls Microchip's MCP4XXX range of digital potentiometers.
@@ -349,6 +346,4 @@ class MCP4XXX
     mutable unsigned int m_select_nesting;
 };
 
-} // end namespace arduino
-} // end namespace icecave
-#endif // __ICECAVE_ARDUINO_MCP4XXX
+#endif // __ARDUINO_MCP4XXX
